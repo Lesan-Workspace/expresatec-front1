@@ -26,7 +26,7 @@ const Login = () => {
 
               <button onClick={() => toast.warning('Abraham maldito')} type="submit" className='bg-blue-600 text-white p-2 rounded-md w-full'>Login</button>
               <div className='mt-2'>
-                <p>¿no tienes cuenta?, Registrate <Link className='text-sky-600' to='/register'> Aquí</Link> </p>
+                <p>¿no tienes cuenta?, Registrate <Link className='text-yellow-400' to='/register'> Aquí</Link> </p>
               </div>
             </form>
           </div>
