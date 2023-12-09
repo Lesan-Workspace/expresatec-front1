@@ -94,11 +94,11 @@ const Register = () => {
               </div>
               <div className='mb-5'>
 
-                <Input type="tezt" label="INgrese su Apellido" onChange={(e) => setLastname(e.target.value)} />
+                <Input type="tezt" label="Ingrese su Apellido" onChange={(e) => setLastname(e.target.value)} />
               </div>
               <div className='mb-5'>
 
-                <Input type="email" label="INgrese su Email" onChange={(e) => setEmail(e.target.value)} />
+                <Input type="email" label="Ingrese su Email" onChange={(e) => setEmail(e.target.value)} />
               </div>
               <div className='mb-5'>
                 <Input type="password" label="Ingrese una contraseña" onChange={handlePassword2Change} />

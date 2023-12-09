@@ -12,6 +12,27 @@ const RegisterUser = async (data) => {
 }
 
 
+
+
+
+
+const LoginUser = async (data) => {
+    try {
+        const response = await axios.post('https://expresatec-server.onrender.com/api/v1/auth/login', data)
+        return response
+
+    } catch (error) {
+        console.log('login Failed', error);
+        throw error;
+
+    }
+}
+
+const Logout = () => {
+    localStorage.removeItem("token");
+}
+
 export {
-    RegisterUser
+    RegisterUser,
+    LoginUser
 }

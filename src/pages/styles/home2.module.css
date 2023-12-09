@@ -1,41 +1,53 @@
 .welcome {
-    font-family: 'Space Grotesk', sans-serif, 'Courier New', Courier, monospace;
-  
-    font-size: 78px;
-    font-weight: 700;
-    text-align: center;
-    background-color: #000;
-    background-image: linear-gradient(-45deg, #0b80bf 9%, rgb(170, 172, 34)50%, rgb(217, 21, 21) 90%);
-    background-size: 200% 200%;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: brillo 2.8s linear infinite alternate;
-  
-    /* font-size: 80px;
+  font-family: 'Space Grotesk', sans-serif, 'Courier New', Courier, monospace;
+
+  font-size: 78px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #000;
+  background-image: linear-gradient(-45deg, #209ae1 9%, #9ffe8a 50%, #e14343 90%);
+  background-size: 200% 200%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: brillo 2.8s linear infinite alternate;
+
+  /* font-size: 80px;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif; */
-  }
-  .hero1 {
+}
 
-    padding-top:15%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-  
-    color: rgb(0, 0, 0);
-  
-  }  
-  
-  
-  @keyframes brillo {
-    0% {
-      background-position: 0% 50%;
-    }
-  
-    100% {
-      background-position: 100% 50%;
-    }
+.hero1 {
+
+  padding-top: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+
+  color: rgb(0, 0, 0);
+
+}
+
+.bgimage {
+  background-image: url("../../assets/descargassssss.png");
+  background-size: cover;
+  background-position: center;
+
+
+
+}
+
+
+
+
+@keyframes brillo {
+  0% {
+    background-position: 0% 50%;
   }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
