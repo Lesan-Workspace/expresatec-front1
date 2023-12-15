@@ -41,6 +41,8 @@ const Login = () => {
         localStorage.setItem('userId', decodedToken.userId);
         console.log(decodedToken);
         toast.success('Login exitoso')
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        window.location.href = '/';
 
       } else {
         toast.error('Token no encontrado en la respuesta');

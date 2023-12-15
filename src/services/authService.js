@@ -28,11 +28,17 @@ const LoginUser = async (data) => {
     }
 }
 
-const Logout = () => {
+
+
+const Logout = async () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("userId");
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    window.location.href = '/';
 }
 
 export {
     RegisterUser,
-    LoginUser
+    LoginUser,
+    Logout
 }

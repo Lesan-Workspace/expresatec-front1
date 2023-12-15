@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import { Logout } from '../services/authService'
 const links = [
   {
     text: "Home",
@@ -29,7 +29,7 @@ const Navbar = () => {
     <header className="mt-1">
       <nav className="flex justify-around items-center">
         <div className="flex justify-between w-full md:w-auto">
-          <div>
+          <div className='mb-2'>
             <Link to="/">
               <img src="https://i.ibb.co/zP2fkYq/logotipo.png" style={{ width: 45 }} alt="" />
             </Link>
@@ -58,12 +58,12 @@ const Navbar = () => {
             {isOpen && (
               <ul className="absolute mt-2 bg-white rounded-md shadow-md">
                 <li>
-                  <Link href="/profile" className="block py-2 px-4 hover:bg-gray-200">
+                  <Link to="/profile" className="block py-2 px-4 hover:bg-gray-200">
                     Profile
                   </Link>
                 </li>
                 <li>
-                  <button className="block py-2 px-4 hover:bg-gray-200"  >
+                  <button className="block py-2 px-4 hover:bg-gray-200" onClick={Logout}  >
                     Logout
                   </button>
                 </li>
