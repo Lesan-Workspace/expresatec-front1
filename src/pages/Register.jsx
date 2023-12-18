@@ -48,7 +48,7 @@ const Register = () => {
       }).then((result) => {
 
         if (result.isConfirmed || result.dismiss === Swal.DismissReason.timer) {
-          window.location.href = '/login';
+          window.location.href = '#/login';
         }
       });
 
