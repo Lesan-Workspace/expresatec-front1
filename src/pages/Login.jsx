@@ -42,7 +42,7 @@ const Login = () => {
         console.log(decodedToken);
         toast.success('Login exitoso')
         await new Promise((resolve) => setTimeout(resolve, 1000));
-        window.location.href = '#/';
+        window.location.href = '/';
 
       } else {
         toast.error('Token no encontrado en la respuesta');
