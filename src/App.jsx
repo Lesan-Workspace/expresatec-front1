@@ -16,28 +16,28 @@ function App() {
   const hasTokenAndUserId = localStorage.getItem('token') && localStorage.getItem('userId');
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          {hasTokenAndUserId ? (
-            <>
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home2 />} />
-              <Route path="/games" element={<Juegos />} />
-              <Route path="/help" element={<Ayuda />} />
-              <Route path="/profile" element={<Profile />} />
 
-              <Route path="*" element={<Navigate to="/" />} />
-            </>
-          ) : (
-            <>
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/" element={<Home2 />} />
-              <Route path="*" element={<Navigate to="/" />} />
-            </>
-          )}
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        {hasTokenAndUserId ? (
+          <>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home2 />} />
+            <Route path="/games" element={<Juegos />} />
+            <Route path="/help" element={<Ayuda />} />
+            <Route path="/profile" element={<Profile />} />
+
+            <Route path="*" element={<Navigate to="/" />} />
+          </>
+        ) : (
+          <>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/" element={<Home2 />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </>
+        )}
+      </Routes>
+
 
     </>
   )
