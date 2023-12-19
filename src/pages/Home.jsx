@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 import amarillo from '../assets/amarillo.jpeg'
 import OIGImage from '../assets/OIG.jpeg'
 import { useState } from 'react'
+import Cardgame from '../components/Cardgame/Cardgame'
 const Home = () => {
   dotPulse.register()
   const [userdata, setUserdata] = useState()
@@ -62,13 +63,42 @@ const Home = () => {
           </>
         )}
       </div >
+      <div>
 
-      <div className='flex flex-row justify-around mt-10'>
-        <Link><Cardhome color="bg-yellow-300" titulo="Juegos" enlace="/games" boton="Ver juegos" /></Link>
-        <Link><Cardhome color="bg-red-300" titulo="Ayuda" enlace="/help" boton="Más información" /></Link>
-        <Link><Cardhome color="bg-blue-300" titulo="Juegos" enlace="/games" boton="Ver juegos" /></Link>
+        <div className='flex flex-row justify-around mt-10'>
+          <Link><Cardhome color="bg-yellow-300" titulo="Juegos" enlace="/games" boton="Ver juegos" /></Link>
+          <Link><Cardhome color="bg-red-300" titulo="Ayuda" enlace="/help" boton="Más información" /></Link>
+          <Link><Cardhome color="bg-blue-300" titulo="Juegos" enlace="/games" boton="Ver juegos" /></Link>
+
+        </div>
 
       </div>
+
+
+      <div className='mt-40'>
+        <div className='mb-20'>
+          <p className='text-center font-bold text-3xl'>Actividades para él</p>
+
+        </div>
+        <div className="game flex flex-row justify-around mt-[50px] ">
+          <Link><Cardgame titulo="En el cine" img="https://i.ibb.co/w03bQTh/image-removebg-preview-20.png" /></Link>
+
+          <Link><Cardgame titulo="En la escuela" img="https://i.ibb.co/y6T8dVM/image-removebg-preview-21.png" /></Link>
+          <Link> <Cardgame titulo="En el parque" img="https://i.ibb.co/GRkN61Y/tree-bench-lamp-and-trash-can-in-the-park-vector-illustration-free-png.webp" /></Link>
+          <Link> <Cardgame titulo="En el parque" img="https://i.ibb.co/GRkN61Y/tree-bench-lamp-and-trash-can-in-the-park-vector-illustration-free-png.webp" /></Link>
+        </div>
+      </div>
+
+      <div className="lonuevo mt-[150px]">
+        <div className='mb-20'>
+          <p className='text-center font-bold text-3xl'>Lo nuevo del mes</p>
+
+        </div>
+      </div>
+
+
+
+
 
 
 
