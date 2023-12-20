@@ -38,8 +38,8 @@ const Navbar = () => {
         </div>
         <div>
           <ul className="flex gap-10 items-center justify-center">
-            {links.map((link) => (
-              <li key={link.href}>
+            {links.map((link, index) => (
+              <li key={index}>
                 <Link to={link.href} className="hover:text-purple-800 font-semibold">
                   {link.text}
                 </Link>

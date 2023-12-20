@@ -5,7 +5,7 @@ const Card = (props) => {
         <>
             <div className={` mx-auto ${props.color} shadow-lg rounded-md transform transition-transform hover:scale-105 hover:shadow-lg overflow-hidden`} style={{ width: '300px' }}>
                 <center>
-                    <img className="p-5 h-37 w-40 object-cover " src={props.image} alt="Imagen del card" />
+                    <img className="p-2 h-[100px] w-[100px] object-cover " src={props.image} alt="Imagen del card" />
                 </center>
 
 

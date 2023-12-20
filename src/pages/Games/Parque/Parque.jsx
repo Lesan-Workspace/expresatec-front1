@@ -1,12 +1,14 @@
 import React from 'react'
 import Navbar from '../../../components/Navbar'
-const Escuela = () => {
+const Parque = () => {
     return (
         <>
             <Navbar />
-            <div>escuela</div>
+            <div>
+                parque
+            </div>
         </>
     )
 }
 
-export default Escuela
+export default Parque

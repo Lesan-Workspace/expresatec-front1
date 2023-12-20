@@ -10,39 +10,33 @@ import amarillo from '../assets/amarillo.jpeg'
 import OIGImage from '../assets/OIG.jpeg'
 import { useState } from 'react'
 import Cardgame from '../components/Cardgame/Cardgame'
+import Category from '../components/Categories/Category'
+import { getCategories } from '../services/fetchServices'
 const Home = () => {
   dotPulse.register()
   const [userdata, setUserdata] = useState()
   const [backgroundImage, setBackgroundImage] = useState(OIGImage);
-
+  const [categories, setCategories] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const data = await getCategories()
         const user = await getUser()
         console.log(user);
-
-
-        if (user.status == 401) {
-          localStorage.removeItem('token');
-          localStorage.removeItem('userId');
-          console.log('token expirado');
-
-        } else {
-          console.log(user)
-          setUserdata(user.data)
-          const randomBackground = Math.random() < 0.5 ? OIGImage : amarillo;
-          setBackgroundImage(randomBackground);
-        }
-
-
-
+        setCategories(data)
+        setUserdata(user.data)
+        const randomBackground = Math.random() < 0.5 ? OIGImage : amarillo;
+        setBackgroundImage(randomBackground);
 
 
       } catch (error) {
 
+        console.log(`Error :  ${error}`);
 
-
+        localStorage.removeItem("token");
+        localStorage.removeItem("userId");
+        console.log('token expirado');
       }
     }
 
@@ -59,13 +53,24 @@ const Home = () => {
     <>
       <Navbar />
       <div>
-        {userdata ? (
+        {userdata && categories ? (
           <>
             <>
               <div className={`${styles.hero} h-[350px] bg-cover bg-center  flex flex-row items-center justify-center`} style={{ backgroundImage: `url(${backgroundImage})` }} >
                 <h1 className='font-bold text-center text-5xl mt-10'>Bienvenido {userdata.firstname} {userdata.lastname}</h1>
 
               </div>
+
+              <div className='mt-5'>
+                <div className='mb-10'>
+                  <p className='text-start ml-[70px]  font-bold text-2xl'>Actividades para él</p>
+
+                </div>
+                <Category data={categories} />
+
+              </div>
+
+
 
             </>
           </>
@@ -103,26 +108,10 @@ const Home = () => {
       </div> */}
 
 
-      <div className='mt-10'>
-        <div className='mb-20'>
-          <p className='text-start ml-[70px]  font-bold text-2xl'>Actividades para él</p>
 
-        </div>
-        <div className="game flex flex-row justify-around mt-[50px] ">
-          <Link><Cardgame titulo="En el cine" img="https://i.ibb.co/w03bQTh/image-removebg-preview-20.png" /></Link>
 
-          <Link><Cardgame titulo="En la escuela" img="https://i.ibb.co/y6T8dVM/image-removebg-preview-21.png" /></Link>
-          <Link> <Cardgame titulo="En el parque" img="https://i.ibb.co/GRkN61Y/tree-bench-lamp-and-trash-can-in-the-park-vector-illustration-free-png.webp" /></Link>
-          <Link> <Cardgame titulo="En el parque" img="https://i.ibb.co/GRkN61Y/tree-bench-lamp-and-trash-can-in-the-park-vector-illustration-free-png.webp" /></Link>
-        </div>
-      </div>
 
-      <div className="lonuevo mt-[150px]">
-        <div className='mb-20'>
-          <p className='text-center font-bold text-3xl'>Lo nuevo del mes</p>
 
-        </div>
-      </div>
 
 
 

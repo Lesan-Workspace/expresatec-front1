@@ -17,7 +17,7 @@ const Home2 = () => {
             <div className='bg-white '>
                 <div className=' '>
                     <Navbar2 />
-                    <div className={`flex items-center justify-center h-screen  ${styles.bgimage}`}>
+                    <div className={`flex  justify-center h-[470px]  ${styles.bgimage}`}>
                         <div class="">
                             <section className={styles.hero1}>
 
@@ -39,6 +39,18 @@ const Home2 = () => {
 
                     </div>
                 </div>
+                <div className='relative'>
+                    <div className='flex justify-center items-center '>
+                        <div className='flex flex-wrap justify-center gap-[100px] ' style={{ marginTop: '-46px' }}>
+                            <Card image={facial} color="bg-red-400" titulo="Reconocimiento facial" />
+                            <Card image={jogo} color="bg-yellow-300" titulo="Interactivo" />
+                            <Card image={emotion} color="bg-green-500" titulo="Emociones" />
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div className="section ">
                     <div className="info">
                         <div className="flex flex-row p-20 gap-10 ">
@@ -63,13 +75,6 @@ const Home2 = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-wrap justify-center gap-2 m-5 mt-[10%]'>
-                    <Card image={facial} color="bg-red-400" titulo="Reconocimiento facial" />
-                    <Card image={jogo} color="bg-yellow-300" titulo="Interactivo" />
-                    <Card image={emotion} color="bg-green-500" titulo="Emociones" />
-
-
-                </div>
 
 
                 {/* <FLexcards /> */}

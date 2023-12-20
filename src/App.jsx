@@ -9,6 +9,11 @@ import Ayuda from './pages/Ayuda'
 import { Navigate } from 'react-router-dom'
 import Home2 from './pages/Home2'
 import NotFound from './pages/NotFound'
+import Parque from './pages/Games/Parque/Parque'
+import Escuela from './pages/Games/Escuela/Escuela'
+import Cine from './pages/Games/Cine/Cine'
+import Categorias from './pages/Categorias'
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -25,7 +30,10 @@ function App() {
             <Route path="/games" element={<Juegos />} />
             <Route path="/help" element={<Ayuda />} />
             <Route path="/profile" element={<Profile />} />
-
+            <Route path="/category/:id" element={<Categorias />} />
+            <Route path="/Cine" element={<Cine />} />
+            <Route path="/Parque" element={<Parque />} />
+            <Route path="/Escuela" element={<Escuela />} />
             <Route path="*" element={<Navigate to="/" />} />
           </>
         ) : (

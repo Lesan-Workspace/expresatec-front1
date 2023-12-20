@@ -33,7 +33,7 @@ const LoginUser = async (data) => {
 const Logout = async () => {
     localStorage.removeItem("token");
     localStorage.removeItem("userId");
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 600));
     window.location.href = '/';
 }
 
