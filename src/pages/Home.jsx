@@ -20,6 +20,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const user = await getUser()
+        console.log(user);
 
 
         if (user.status == 401) {
