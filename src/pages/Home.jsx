@@ -17,13 +17,40 @@ const Home = () => {
 
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const user = await getUser()
 
-    getUser(setUserdata)
-    const randomBackground = Math.random() < 0.5 ? OIGImage : amarillo;
-    setBackgroundImage(randomBackground);
+
+        if (user.status == 401) {
+          localStorage.removeItem('token');
+          localStorage.removeItem('userId');
+          console.log('token expirado');
+
+        } else {
+          console.log(user)
+          setUserdata(user.data)
+          const randomBackground = Math.random() < 0.5 ? OIGImage : amarillo;
+          setBackgroundImage(randomBackground);
+        }
 
 
+
+
+
+      } catch (error) {
+
+
+
+      }
+    }
+
+
+    fetchData()
   }, [])
+
+
+
 
 
 
@@ -63,7 +90,7 @@ const Home = () => {
           </>
         )}
       </div >
-      <div>
+      {/* <div>
 
         <div className='flex flex-row justify-around mt-10'>
           <Link><Cardhome color="bg-yellow-300" titulo="Juegos" enlace="/games" boton="Ver juegos" /></Link>
@@ -72,12 +99,12 @@ const Home = () => {
 
         </div>
 
-      </div>
+      </div> */}
 
 
-      <div className='mt-40'>
+      <div className='mt-10'>
         <div className='mb-20'>
-          <p className='text-center font-bold text-3xl'>Actividades para él</p>
+          <p className='text-start ml-[70px]  font-bold text-2xl'>Actividades para él</p>
 
         </div>
         <div className="game flex flex-row justify-around mt-[50px] ">
