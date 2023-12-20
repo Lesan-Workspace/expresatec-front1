@@ -32,14 +32,14 @@ const Navbar2 = () => {
         <>
             <div className=' w-full bg-white'>
 
-                <header className="mt-5 mb-5" >
+                <header className="mt-4 mb-4" >
                     <nav className="flex justify-around items-center " >
                         <div className="flex justify-between w-full md:w-auto mb-3">
 
                             <div>
 
                                 <Link to="/">
-                                    <img src="https://i.ibb.co/zP2fkYq/logotipo.png" style={{ width: 45 }} alt="" />
+                                    <img src="https://i.ibb.co/80kC8vg/expresatec.png" style={{ width: 220 }} alt="" />
                                 </Link>
 
                             </div>

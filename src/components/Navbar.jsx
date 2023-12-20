@@ -27,16 +27,19 @@ const Navbar = () => {
 
   return (
     <header className="mt-1">
-      <nav className="flex justify-around items-center">
+
+      <nav className="flex justify-around items-center ">
+
         <div className="flex justify-between w-full md:w-auto">
           <div className='mb-2'>
             <Link to="/">
-              <img src="https://i.ibb.co/zP2fkYq/logotipo.png" style={{ width: 45 }} alt="" />
+              <img src="https://i.ibb.co/80kC8vg/expresatec.png" style={{ width: 220, paddingRight: 60 }} alt="" />
             </Link>
 
           </div>
         </div>
-        <div>
+
+        <div className='items-centers' style={{ paddingRight: 170 }}>
           <ul className="flex gap-10 items-center justify-center">
             {links.map((link, index) => (
               <li key={index}>
@@ -71,6 +74,7 @@ const Navbar = () => {
             )}
           </div>
         </div>
+
       </nav>
     </header>
   )
